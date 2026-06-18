@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consciência Digital: Deepfakes e Desinformação</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Cidadania Digital & IA</h1>
+        <p>Aprenda a identificar deepfakes e combater a desinformação.</p>
+        <button id="btn-theme">Alternar Modo Escuro</button>
+    </header>
+
+    <main>
+        <section id="sobre-deepfakes">
+            <h2>O que são Deepfakes?</h2>
+            <p>Deepfakes são mídias digitais (vídeos, áudios ou imagens) manipuladas de forma profunda por Inteligência Artificial, capazes de simular o rosto e a voz de pessoas reais dizendo ou fazendo coisas que nunca aconteceram.</p>
+        </section>
+
+        <section id="quiz-section">
+            <h2>Desafio: Você sabe identificar uma Deepfake?</h2>
+            <form id="quiz-form">
+                <label for="pergunta1">Ao desconfiar de um vídeo bombástico, qual o primeiro passo?</label>
+                <select id="pergunta1" required>
+                    <option value="">Escolha uma opção...</option>
+                    <option value="errado">Compartilhar imediatamente nos grupos da família.</option>
+                    <option value="certo">Verificar em portais de checagem confiáveis e olhar os detalhes do vídeo.</option>
+                    <option value="errado">Acreditar apenas se a voz parecer muito real.</option>
+                </select>
+
+                <button type="submit" id="btn-enviar">Verificar Resposta</button>
+            </form>
+            <div id="resultado-quiz" class="hidden"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Desenvolvido para o Projeto de Cidadania Digital. Fontes das mídias: [Inserir Créditos].</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
