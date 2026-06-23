@@ -1,0 +1,222 @@
+/* Definições Gerais e Cores Voltadas à Tecnologia/Segurança */
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-color: #38bdf8;
+    --correct-color: #4ade80;
+    --incorrect-color: #f87171;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.main-header {
+    background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+    padding: 3rem 1rem;
+    text-align: center;
+    border-bottom: 2px solid #1e293b;
+}
+
+.header-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-container h1 span {
+    color: var(--accent-color);
+}
+
+.header-container p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* Layout Principal */
+.content-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.info-section, .quiz-section {
+    padding: 2rem 0;
+}
+
+h2 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #334155;
+    margin: 2rem 0;
+}
+
+/* Grid com Flexbox */
+.tips-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.tip-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    flex: 1 1 calc(33.333% - 1rem);
+    min-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito Hover para Usabilidade Nível 4 */
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.1);
+}
+
+.tip-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+.tip-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Estilização do Quiz */
+.quiz-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-question {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.option-container {
+    display: flex;
+    align-items: center;
+    background-color: #111827;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.option-container:hover {
+    background-color: #1f2937;
+}
+
+.option-container input[type="radio"] {
+    margin-right: 1rem;
+    accent-color: var(--accent-color);
+    transform: scale(1.2);
+}
+
+.option-container label {
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Botão Interativo */
+button {
+    background-color: var(--accent-color);
+    color: #0f172a;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    background-color: #7dd3fc;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+/* Feedback Box */
+.feedback-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.feedback-box.correct {
+    background-color: rgba(74, 222, 128, 0.15);
+    border: 1px solid var(--correct-color);
+    color: var(--correct-color);
+}
+
+.feedback-box.incorrect {
+    background-color: rgba(248, 113, 113, 0.15);
+    border: 1px solid var(--incorrect-color);
+    color: var(--incorrect-color);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Rodapé */
+.main-footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    background-color: #0b0f19;
+    margin-top: 4rem;
+}
+
+/* Animação simples */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade (Media Queries) */
+@media (max-width: 768px) {
+    .tips-grid {
+        flex-direction: column;
+    }
+    
+    .header-container h1 {
+        font-size: 2rem;
+    }
+    
+    .quiz-card {
+        padding: 1.25rem;
+    }
+}
