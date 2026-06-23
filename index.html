@@ -3,44 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consciência Digital: Deepfakes e Desinformação</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Portal Cidadania Digital: IA e Deepfakes</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Cidadania Digital & IA</h1>
-        <p>Aprenda a identificar deepfakes e combater a desinformação.</p>
-        <button id="btn-theme">Alternar Modo Escuro</button>
+    <header class="main-header">
+        <div class="header-container">
+            <h1>Cidadania<span>Digital</span></h1>
+            <p>Conscientização contra a Desinformação Automatizada</p>
+        </div>
     </header>
 
-    <main>
-        <section id="sobre-deepfakes">
+    <main class="content-container">
+        
+        <section class="info-section">
             <h2>O que são Deepfakes?</h2>
-            <p>Deepfakes são mídias digitais (vídeos, áudios ou imagens) manipuladas de forma profunda por Inteligência Artificial, capazes de simular o rosto e a voz de pessoas reais dizendo ou fazendo coisas que nunca aconteceram.</p>
+            <p>Deepfakes são vídeos, áudios ou imagens manipulados de forma realista por meio de Inteligência Artificial. Embora a tecnologia tenha usos legítimos no entretenimento, ela é frequentemente usada para espalhar desinformação, criar falsos testemunhos e manipular a opinião pública.</p>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3>👁️ Piscar de Olhos</h3>
+                    <p>Muitas ferramentas de IA ainda falham em reproduzir o piscar de olhos natural dos seres humanos.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>👂 Falhas nas Bordas</h3>
+                    <p>Preste atenção em distorções perto das orelhas, cabelos e fundos borrados de forma estranha.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>🗣️ Sincronia de Áudio</h3>
+                    <p>Muitas vezes o movimento dos lábios não condiz perfeitamente com o som emitido.</p>
+                </div>
+            </div>
         </section>
 
-        <section id="quiz-section">
-            <h2>Desafio: Você sabe identificar uma Deepfake?</h2>
-            <form id="quiz-form">
-                <label for="pergunta1">Ao desconfiar de um vídeo bombástico, qual o primeiro passo?</label>
-                <select id="pergunta1" required>
-                    <option value="">Escolha uma opção...</option>
-                    <option value="errado">Compartilhar imediatamente nos grupos da família.</option>
-                    <option value="certo">Verificar em portais de checagem confiáveis e olhar os detalhes do vídeo.</option>
-                    <option value="errado">Acreditar apenas se a voz parecer muito real.</option>
-                </select>
+        <hr>
 
-                <button type="submit" id="btn-enviar">Verificar Resposta</button>
-            </form>
-            <div id="resultado-quiz" class="hidden"></div>
+        <section class="quiz-section">
+            <h2>Desafio Anti-Desinformação</h2>
+            <p>Você consegue treinar seu olhar para a verdade digital? Responda à questão abaixo:</p>
+            
+            <div class="quiz-card">
+                <div class="quiz-question">
+                    <p><strong>Situação:</strong> Você recebeu um vídeo bombástico no WhatsApp de um político famoso cometendo um crime. A voz parece real, mas o vídeo está um pouco embaçado em volta do rosto dele. O que você faz?</p>
+                </div>
+
+                <form id="quiz-form">
+                    <div class="option-container">
+                        <input type="radio" id="opt1" name="quiz" value="errada1">
+                        <label for="opt1">Compartilho imediatamente nos grupos da família para alertar a todos.</label>
+                    </div>
+                    
+                    <div class="option-container">
+                        <input type="radio" id="opt2" name="quiz" value="correta">
+                        <label for="opt2">Não compartilho. Procuro em agências de checagem confiáveis e grandes portais de notícia antes de repassar.</label>
+                    </div>
+
+                    <div class="option-container">
+                        <input type="radio" id="opt3" name="quiz" value="errada2">
+                        <label for="opt3">Acredito na hora, afinal se está em formato de vídeo na internet, é verdade.</label>
+                    </div>
+
+                    <button type="button" id="btn-check">Verificar Resposta</button>
+                </form>
+
+                <div id="quiz-feedback" class="feedback-box hidden">
+                    <p id="feedback-text"></p>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 - Desenvolvido para o Projeto de Cidadania Digital. Fontes das mídias: [Inserir Créditos].</p>
+    <footer class="main-footer">
+        <p>&copy; 2026 - Projeto Cidadania Digital. Desenvolvido para fins educacionais.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
